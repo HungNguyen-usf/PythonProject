@@ -1,6 +1,6 @@
 import random
 
-
+# Create a class which generate random number from 1-10
 class rand_Num:
     def generate(self):
         global secret_number
@@ -8,11 +8,14 @@ class rand_Num:
         return secret_number
 
 
+# Set the guess count and guess limit as well as creating a new randomly generated number
 guess_count = 0
 guess_limit = 3
 random_num = rand_Num()
 random_num.generate()
 
+# Using while loops for when the guess count is still in limit or when they guess the correct number
+# within the guess limit
 while guess_count < guess_limit:
     guess = int(input("Guess: "))
     guess_count += 1
